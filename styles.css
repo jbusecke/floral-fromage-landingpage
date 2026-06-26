@@ -1,0 +1,228 @@
+/* ===== Floral Fromage — landing page ===== */
+:root {
+  --navy: #1f2a63;
+  --navy-deep: #161f4d;
+  --gold: #e3b023;
+  --gold-soft: #f0c84a;
+  --cream: #faf5ec;
+  --cream-deep: #f3ead9;
+  --ink: #2a2a2e;
+  --muted: #6b6b76;
+  --white: #ffffff;
+  --shadow: 0 18px 40px -24px rgba(31, 42, 99, 0.45);
+  --radius: 18px;
+  --maxw: 920px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Mulish", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 50% -10%, #fffdf8 0%, var(--cream) 55%, var(--cream-deep) 100%);
+  background-attachment: fixed;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.page {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 5vw, 2.5rem) 3rem;
+}
+
+/* ===== Hero ===== */
+.hero { text-align: center; }
+
+.hero__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(132px, 24vw, 168px);
+  height: clamp(132px, 24vw, 168px);
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  animation: floatIn 0.9s ease both;
+}
+
+.hero__logo img {
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
+}
+
+.hero__name {
+  font-family: "Fraunces", Georgia, serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: clamp(2.6rem, 9vw, 4.6rem);
+  line-height: 1.02;
+  color: var(--navy);
+  margin: 1.1rem 0 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.hero__tagline {
+  font-family: "Fraunces", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: clamp(1rem, 2.6vw, 1.2rem);
+  margin: 0;
+}
+
+/* ===== Intro ===== */
+.intro {
+  text-align: center;
+  max-width: 640px;
+  margin: clamp(2.2rem, 6vw, 3.4rem) auto 0;
+}
+
+.intro__lead {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.25rem, 3.4vw, 1.6rem);
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.45;
+  margin: 0 0 1rem;
+}
+
+.intro__body {
+  font-size: clamp(1rem, 2.4vw, 1.08rem);
+  color: var(--ink);
+  margin: 0;
+}
+
+.intro strong { color: var(--navy); font-weight: 700; }
+
+/* ===== Contact buttons ===== */
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: clamp(1.8rem, 5vw, 2.6rem) auto 0;
+  max-width: 540px;
+}
+
+.btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  background: var(--white);
+  color: var(--navy);
+  border: 1px solid rgba(31, 42, 99, 0.12);
+  padding: 0.75rem 1.15rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 26px -20px rgba(31, 42, 99, 0.6);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px -18px rgba(31, 42, 99, 0.55);
+}
+
+.btn--primary {
+  background: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+
+.btn--primary .btn__sub { color: var(--gold-soft); }
+
+.btn__icon { font-size: 1.15rem; line-height: 1; }
+
+.btn__label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+
+.btn__sub {
+  font-weight: 600;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+/* ===== Gallery ===== */
+.gallery { margin-top: clamp(3rem, 8vw, 4.5rem); text-align: center; }
+
+.gallery__title {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  color: var(--navy);
+  margin: 0 0 1.5rem;
+}
+
+.ig-embeds {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  align-items: start;
+  justify-items: center;
+}
+
+.ig-embeds .instagram-media {
+  width: 100% !important;
+  max-width: 380px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.gallery__cta {
+  display: inline-block;
+  margin-top: 1.8rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 2px;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.gallery__cta:hover { color: var(--gold); border-color: var(--navy); }
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: clamp(3rem, 8vw, 4.5rem);
+  padding-top: 2rem;
+  border-top: 1px solid rgba(31, 42, 99, 0.12);
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer__loc { margin: 0 0 0.5rem; font-weight: 600; color: var(--navy); }
+.footer__social { margin: 0 0 0.6rem; }
+.footer__social a { color: var(--navy); text-decoration: none; font-weight: 600; }
+.footer__social a:hover { color: var(--gold); }
+.footer__copy { margin: 0; font-size: 0.82rem; }
+
+/* ===== Animations ===== */
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 540px) {
+  .contact { grid-template-columns: 1fr; max-width: 360px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; scroll-behavior: auto; }
+}
