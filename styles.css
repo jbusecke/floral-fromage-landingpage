@@ -101,6 +101,70 @@ body {
 
 .intro strong { color: var(--navy); font-weight: 700; }
 
+/* ===== Labor Day special ===== */
+.special {
+  max-width: 640px;
+  margin: clamp(2rem, 5vw, 2.8rem) auto 0;
+}
+
+.special__card {
+  background: var(--white);
+  border: 1px solid rgba(31, 42, 99, 0.12);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-align: center;
+}
+
+.special__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.special__text { padding: 1.4rem clamp(1.1rem, 4vw, 2rem) 1.6rem; }
+
+.special__eyebrow {
+  margin: 0 0 0.3rem;
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+}
+
+.special__title {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  color: var(--navy);
+  margin: 0 0 0.35rem;
+  line-height: 1.15;
+}
+
+.special__detail {
+  margin: 0 0 0.7rem;
+  font-size: clamp(1rem, 2.6vw, 1.12rem);
+  color: var(--ink);
+}
+
+.special__detail strong { color: var(--navy); font-weight: 700; }
+
+.special__order {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.special__order a {
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--gold);
+}
+
+.special__order a:hover { color: var(--gold); border-color: var(--navy); }
+
 /* ===== Contact buttons ===== */
 .contact {
   display: grid;
